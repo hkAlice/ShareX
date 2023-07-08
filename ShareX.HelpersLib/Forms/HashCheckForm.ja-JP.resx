@@ -132,9 +132,6 @@
   <data name="btnStartHashCheck.Text" xml:space="preserve">
     <value>開始</value>
   </data>
-  <data name="lblFile.Text" xml:space="preserve">
-    <value>ファイルのパス:</value>
-  </data>
   <data name="tpFileHashCheck.Text" xml:space="preserve">
     <value>ファイルのハッシュ値照合</value>
   </data>
@@ -181,6 +178,12 @@
     <value>参照...</value>
   </data>
   <data name="cbCompareTwoFiles.Text" xml:space="preserve">
-    <value>2つのファイルを比較する</value>
+    <value>2つのファイルを比較</value>
+  </data>
+  <data name="lblFilePath.Text" xml:space="preserve">
+    <value>ファイルのパス:</value>
+  </data>
+  <data name="lblFilePath2.Text" xml:space="preserve">
+    <value>ファイルのパス:</value>
   </data>
 </root>

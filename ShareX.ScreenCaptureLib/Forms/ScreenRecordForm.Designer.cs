@@ -17,11 +17,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenRecordForm));
-            this.btnStart = new ShareX.HelpersLib.BlackStyleButton();
-            this.lblTimer = new ShareX.HelpersLib.BlackStyleLabel();
+            this.btnStart = new ShareX.HelpersLib.NoFocusBorderButton();
+            this.lblTimer = new System.Windows.Forms.Label();
             this.timerRefresh = new System.Windows.Forms.Timer(this.components);
-            this.btnAbort = new ShareX.HelpersLib.BlackStyleButton();
+            this.btnAbort = new ShareX.HelpersLib.NoFocusBorderButton();
             this.pInfo = new System.Windows.Forms.Panel();
+            this.btnPause = new ShareX.HelpersLib.NoFocusBorderButton();
             this.cmsMain = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiStart = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAbort = new System.Windows.Forms.ToolStripMenuItem();
@@ -33,18 +34,16 @@
             // btnStart
             // 
             resources.ApplyResources(this.btnStart, "btnStart");
-            this.btnStart.ForeColor = System.Drawing.Color.White;
             this.btnStart.Name = "btnStart";
             this.btnStart.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnStart_MouseClick);
             // 
             // lblTimer
             // 
-            this.lblTimer.BackColor = System.Drawing.Color.DimGray;
-            this.lblTimer.DrawBorder = true;
             resources.ApplyResources(this.lblTimer, "lblTimer");
-            this.lblTimer.ForeColor = System.Drawing.Color.White;
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTimer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblTimer_MouseDown);
+            this.lblTimer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblTimer_MouseMove);
+            this.lblTimer.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lblTimer_MouseUp);
             // 
             // timerRefresh
             // 
@@ -53,17 +52,23 @@
             // btnAbort
             // 
             resources.ApplyResources(this.btnAbort, "btnAbort");
-            this.btnAbort.ForeColor = System.Drawing.Color.White;
             this.btnAbort.Name = "btnAbort";
             this.btnAbort.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnAbort_MouseClick);
             // 
             // pInfo
             // 
             resources.ApplyResources(this.pInfo, "pInfo");
+            this.pInfo.Controls.Add(this.btnPause);
             this.pInfo.Controls.Add(this.btnAbort);
             this.pInfo.Controls.Add(this.btnStart);
             this.pInfo.Controls.Add(this.lblTimer);
             this.pInfo.Name = "pInfo";
+            // 
+            // btnPause
+            // 
+            resources.ApplyResources(this.btnPause, "btnPause");
+            this.btnPause.Name = "btnPause";
+            this.btnPause.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnPause_MouseClick);
             // 
             // cmsMain
             // 
@@ -113,14 +118,15 @@
 
         #endregion
 
-        private HelpersLib.BlackStyleButton btnStart;
+        private ShareX.HelpersLib.NoFocusBorderButton btnStart;
         private System.Windows.Forms.Timer timerRefresh;
-        private HelpersLib.BlackStyleLabel lblTimer;
-        private HelpersLib.BlackStyleButton btnAbort;
+        private System.Windows.Forms.Label lblTimer;
+        private ShareX.HelpersLib.NoFocusBorderButton btnAbort;
         private System.Windows.Forms.Panel pInfo;
         private System.Windows.Forms.ContextMenuStrip cmsMain;
         private System.Windows.Forms.ToolStripMenuItem tsmiStart;
         private System.Windows.Forms.ToolStripMenuItem tsmiAbort;
         private System.Windows.Forms.NotifyIcon niTray;
+        private HelpersLib.NoFocusBorderButton btnPause;
     }
 }

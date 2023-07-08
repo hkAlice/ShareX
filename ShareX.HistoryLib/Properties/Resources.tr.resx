@@ -169,7 +169,7 @@
     <value>Resim önizleme...</value>
   </data>
   <data name="HistoryItemManager_InitializeComponent_More_info" xml:space="preserve">
-    <value>Daha fazla bilgi</value>
+    <value>Daha fazla bilgi...</value>
   </data>
   <data name="HistoryItemManager_InitializeComponent_Open" xml:space="preserve">
     <value>Aç</value>
@@ -197,5 +197,44 @@
   </data>
   <data name="HistoryItemManager_InitializeComponent_Markdown__image" xml:space="preserve">
     <value>Markdown resim</value>
+  </data>
+  <data name="ErrorOccuredWhileReadingHistoryFile" xml:space="preserve">
+    <value>Geçmiş dosyası okunurken hata oluştu:</value>
+  </data>
+  <data name="HistoryForm_Search_Watermark" xml:space="preserve">
+    <value>Dosya ismi, pencere başlığı, işlem ismi vs.</value>
+  </data>
+  <data name="HistoryItemCounts" xml:space="preserve">
+    <value>Geçmiş girdi sayıları:</value>
+  </data>
+  <data name="HistoryItemManager_InitializeComponent_EditImage" xml:space="preserve">
+    <value>Resimi düzenle...</value>
+  </data>
+  <data name="HistoryItemManager_InitializeComponent_UploadFile" xml:space="preserve">
+    <value>Dosyayı karşıya aktar</value>
+  </data>
+  <data name="HistoryStats_FileExtensions" xml:space="preserve">
+    <value>Dosya uzantıları:</value>
+  </data>
+  <data name="HistoryStats_Hosts" xml:space="preserve">
+    <value>Sunucular:</value>
+  </data>
+  <data name="HistoryStats_Total" xml:space="preserve">
+    <value>Toplam:</value>
+  </data>
+  <data name="HistoryStats_YearlyUsages" xml:space="preserve">
+    <value>Yıllık kullanım:</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Toplam</value>
+  </data>
+  <data name="Filtered" xml:space="preserve">
+    <value>Filtrelenmiş</value>
+  </data>
+  <data name="HistoryStats" xml:space="preserve">
+    <value>Geçmiş istatistikleri</value>
+  </data>
+  <data name="ProcessNames" xml:space="preserve">
+    <value>İşlem isimleri:</value>
   </data>
 </root>
