@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2020 ShareX Team
+    Copyright (c) 2007-2023 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -89,7 +89,7 @@ namespace ShareX
         public string FileName { get; set; }
         public string ThumbnailFilePath { get; set; }
         public EDataType DataType { get; set; }
-        public ImageInfo ImageInfo { get; set; }
+        public TaskMetadata Metadata { get; set; }
 
         public EDataType UploadDestination
         {
@@ -159,23 +159,24 @@ namespace ShareX
             }
 
             TaskSettings = taskSettings;
+            Metadata = new TaskMetadata();
             Result = new UploadResult();
         }
 
         public Dictionary<string, string> GetTags()
         {
-            if (ImageInfo != null)
+            if (Metadata != null)
             {
                 Dictionary<string, string> tags = new Dictionary<string, string>();
 
-                if (!string.IsNullOrEmpty(ImageInfo.WindowTitle))
+                if (!string.IsNullOrEmpty(Metadata.WindowTitle))
                 {
-                    tags.Add("WindowTitle", ImageInfo.WindowTitle);
+                    tags.Add("WindowTitle", Metadata.WindowTitle);
                 }
 
-                if (!string.IsNullOrEmpty(ImageInfo.ProcessName))
+                if (!string.IsNullOrEmpty(Metadata.ProcessName))
                 {
-                    tags.Add("ProcessName", ImageInfo.ProcessName);
+                    tags.Add("ProcessName", Metadata.ProcessName);
                 }
 
                 if (tags.Count > 0)
